@@ -42,6 +42,10 @@ section {
   margin: 20px auto;
 }
 
+main{
+  min-height: 100vh;
+}
+
 .sectionTitle {
   width: max-content;
   height: 70px;
@@ -64,10 +68,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* TABLET */
-@media screen and (max-width: 1200px) {
-  section {
-    width: 90%;
-    margin: auto;
-  }
+h1{
+  font-weight: lighter;
 }
