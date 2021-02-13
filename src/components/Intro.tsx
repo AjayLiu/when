@@ -19,7 +19,6 @@ const Intro: React.FC = () => {
                 <div className = {styles.sms} > 
                     <div className={styles.left}>
                         look no further &#128526;
-                        <div className={styles.textLink}>when.netlify.app/time?=42069123</div>
                     </div>
                 </div>
             </div>

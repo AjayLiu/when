@@ -4,7 +4,9 @@ import GoogleAnalyticsHook from '@components/GoogleAnalyticsHook'
 import Intro from '@components/Intro'
 import TimeCreator from '@components/TimeCreator'
 
+
 const Home: React.FC = () => {
+
   return (
     <>
     <GoogleAnalyticsHook />
@@ -30,6 +32,8 @@ const Home: React.FC = () => {
         <Intro/>
         <TimeCreator/>
       </main>
+
+
 
       <Footer />
     </div>
