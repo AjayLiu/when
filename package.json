@@ -13,6 +13,8 @@
     "dayjs": "^1.10.4",
     "next": "10.0.4",
     "react": "17.0.1",
+    "react-bootstrap": "^1.4.3",
+    "react-bootstrap-timezone-picker": "^2.0.1",
     "react-datetime-picker": "^3.0.5",
     "react-dom": "17.0.1",
     "react-ga": "^3.3.0",

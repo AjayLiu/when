@@ -1,15 +1,11 @@
-.image{
-    width: 150px;
-}
 
-.logoText{
-    font-style: italic;
-    font-size: xx-large;
-}
 
 .conversation{
     display:flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 
 .sms{

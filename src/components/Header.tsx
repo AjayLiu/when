@@ -1,10 +1,14 @@
+import styles from '@styles/Header.module.css'
+import GoogleAnalyticsHook from '@components/GoogleAnalyticsHook'
 
-interface Props{
-  title: string;
-}
-
-const Header: React.FC<Props> = ({ title }) => {
-  return <h1 className="title">{title}</h1>
+const Header: React.FC = () => {
+  return <>
+    <GoogleAnalyticsHook />
+    <a href='/'>
+      <img className={styles.image} src="/img/when.png"></img>
+    </a>
+      <div className={styles.logoText}>when?</div>
+  </>
 }
 
 export default Header;

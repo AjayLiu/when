@@ -3,22 +3,20 @@ import styles from '@styles/Intro.module.css'
 const Intro: React.FC = () => {
     return (
         <div>
-            <img className={styles.image} src="img/when.png"></img>
-            <div className={styles.logoText}>when?</div>
             <div className={styles.conversation}>
                 <div className = {styles.sms} > 
                     <div className={styles.left}>
-                        ugh! I want to host an event but there are too many timezones!
+                        game night at 6PM PST!
                     </div>
                 </div>
                 <div className = {styles.sms} > 
                     <div className={styles.right}>
-                        ugh! I want to join an event but I'm too lazy to convert it to my timezone!
+                        im in japan rn, when is that?
                     </div>
                 </div>
                 <div className = {styles.sms} > 
                     <div className={styles.left}>
-                        look no further &#128526;
+                       im in london, when is that? 
                     </div>
                 </div>
             </div>

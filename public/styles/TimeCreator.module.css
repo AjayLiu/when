@@ -1,28 +1,56 @@
 .picker{
     background-color: #d8d8d8;
     border-radius: 10px;
-    width: 80%;
+    width: 90%;
+    max-width: 800px;
     margin: 20px auto;
     padding-top: 8px;
+    border:1px solid white;
+    padding-bottom: 40px;
     color: black;
 }
 
 .output{
-    border: 1px solid gray;
-    width: fit-content;
-    padding: 10px 40px;
-    margin: 10px auto;
+    /* padding: 10px 0; */
+    padding-bottom: 20px;
 }
 
 .outputBar{
     display: flex;
     align-items: center;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    justify-content: center;
 }
 
-.outputBar > button{
-    margin-left: 30px;
+.clipboardButton{
+    margin-left: 4px;
     width: 40px;
 }
-.outputBar > button > img {
+.clipboardButton > img {
     width: 100%;
+}
+
+.clipboardAndAlert{
+    position: relative;
+}
+
+.copiedAlert{
+    background-color: #77dd77;
+    border-radius: 5px;
+    padding: 3px 10px;
+    position: absolute;
+    bottom: 40px;
+    left: -30%;
+}
+
+.outputLink {
+    vertical-align: middle;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    resize:none;
+    width: 90%;
+    color: #00E
 }

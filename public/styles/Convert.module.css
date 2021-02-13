@@ -1,0 +1,41 @@
+.label{
+}
+
+.date, .time, .timeUntil, .localTime{
+    color: rgb(122, 236, 236);
+}
+
+.date{
+    font-size: 150%;
+    margin-top: 50px;
+}
+
+.time{
+    font-size: 300%;
+    margin-top: 20px;
+}
+
+.timezonePicker{
+    text-align: center;
+    background-color: white;
+    width: 40%;
+}
+
+.timeUntil{
+    margin-top: 100px;
+}
+
+
+.customTimezone{
+    border-top: 1px solid white;
+    width: 50%;
+    margin: 100px auto;
+}
+
+.localTimeBox{
+    font-size: larger;
+    margin-top: 20px;
+}
+.localTime{
+    font-size: xx-large;
+}

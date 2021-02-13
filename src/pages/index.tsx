@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Header from '@components/Header'
 import Footer from '@components/Footer'
 import GoogleAnalyticsHook from '@components/GoogleAnalyticsHook'
 import Intro from '@components/Intro'
@@ -27,7 +28,7 @@ const Home: React.FC = () => {
         <meta property="og:description" content="When is that in my timezone?" />
 
       </Head>
-
+      <Header/>
       <main>
         <Intro/>
         <TimeCreator/>

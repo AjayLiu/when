@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle'
 import styles from '@styles/TimeCreator.module.css'
 
@@ -6,33 +6,69 @@ import dayjs from 'dayjs';
 
 const TimeCreator: React.FC = () => {
     const [time, setTime] = useState(new Date());
-    const [outputLink, setOutputLink] = useState(`https://when.netlify.app/time?=${Math.floor(time.getTime() / 1000)}`);
+    const [outputLink, setOutputLink] = useState(`https://when.netlify.app/convert/${dayjs().unix()}`);
+    const outputLinkRef = useRef(null);
+    const [isCopied, setIsCopied] = useState(false);
 
     const onChange = (value) => {
         setTime(value);
-        const ms = dayjs(value).unix();
-        setOutputLink(`https://when.netlify.app/time?=${ms}`)
+        let ms = dayjs(value).unix();
+        if(value == null){
+            ms = null;
+        }
+        
+        setOutputLink(`https://when.netlify.app/convert/${ms||''}`)
     }
 
+
+    //set copied to false after 3 seconds
+    useEffect(()=>{
+        if(isCopied){
+            setTimeout(()=>{
+                setIsCopied(false);
+            }, 3000)
+        }
+    }, [isCopied]);
+
+    const onClipboard = (e) =>  {
+        outputLinkRef.current.select();
+        document.execCommand('copy');
+        e.target.focus();
+        setIsCopied(true);
+
+
+    }
     return (
         <div>
             <div className={styles.picker}>
                 <h2>Generate a link</h2>
-                <div>Enter Date and Time to share:</div>
+                <h3>Enter Date and Time to share:</h3>
                 <DateTimePicker 
                     minDate={new Date()}
                     onChange={onChange}
                     value={time}
                     disableClock
                 />
+                <h3>Share this link</h3>
                 <div className={styles.output}>
                     <div className={styles.outputBar}>
-                        <div>
-                            {outputLink}
+                        <textarea 
+                            onFocus={(e)=>e.target.select()} 
+                            className={styles.outputLink} 
+                            ref={outputLinkRef} 
+                            value={outputLink} 
+                            readOnly >
+                        </textarea>
+                        <div className={styles.clipboardAndAlert}>
+                            {isCopied && 
+                                <div className={styles.copiedAlert}>
+                                    Copied!        
+                                </div>
+                            }
+                            <button className={styles.clipboardButton} onClick={(e)=>onClipboard(e)}>
+                                <img src = "img/clipboard.png"></img>
+                            </button>
                         </div>
-                        <button>
-                            <img src = "img/clipboard.png"></img>
-                        </button>
                     </div>
                 </div>
             </div>
