@@ -41,3 +41,10 @@
 .localTime{
     font-size: xx-large;
 }
+
+.createLink{
+    margin: 200px auto;
+    width: fit-content;
+    border: 2px solid white;
+    padding: 10px;
+}

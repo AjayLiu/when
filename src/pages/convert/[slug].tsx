@@ -75,10 +75,12 @@ const Convert: React.FC = () => {
                 </div>
             </div>
         </div>
-
-        <a href="/">
-            Create your own When link here!
-        </a>
+        
+        <div className={styles.createLink}>
+            <a href="/">
+                Create your own When link here!
+            </a>
+        </div>
         <Footer/>
     </>
 }

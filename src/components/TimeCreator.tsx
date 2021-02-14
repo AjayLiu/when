@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 
 const TimeCreator: React.FC = () => {
     const [time, setTime] = useState(new Date());
-    const [outputLink, setOutputLink] = useState(`https://when.netlify.app/convert/${Math.floor(Date.now() / 1000)}`);
+    const [outputLink, setOutputLink] = useState('');
     const outputLinkRef = useRef(null);
     const [isCopied, setIsCopied] = useState(false);
 
@@ -20,6 +20,9 @@ const TimeCreator: React.FC = () => {
         setOutputLink(`https://when.netlify.app/convert/${ms||''}`)
     }
 
+    useEffect(()=>{
+        onChange(time);
+    },[time])
 
     //set copied to false after 3 seconds
     useEffect(()=>{
