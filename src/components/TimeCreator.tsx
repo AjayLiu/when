@@ -17,7 +17,11 @@ const TimeCreator: React.FC = () => {
             ms = null;
         }
         
+<<<<<<< HEAD
         setOutputLink(`https://when.netlify.app/convert/${ms||''}`)
+=======
+        setOutputLink(`https://when.ajayliu.netlify.app/convert/${ms||''}`)
+>>>>>>> ee5169a14dede3d9bae48ea88f8b8e2914ebc36d
     }
 
 
