@@ -44,7 +44,7 @@ const TimeCreator: React.FC = () => {
                 <h2>Generate a link</h2>
                 <h3>Enter Date and Time to share:</h3>
                 <DateTimePicker 
-                    minDate={new Date()}
+                    // minDate={new Date()}
                     onChange={onChange}
                     value={time}
                     disableClock
