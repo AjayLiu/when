@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         <meta property="og:title" content="when?" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://when.netlify.app/" />
-        <meta property="og:image" content="/when.png" />
+        <meta property="og:image" content="https://when.netlify.app/img/when.png" />
         <meta property="og:description" content="When is that in my timezone?" />
 
       </Head>

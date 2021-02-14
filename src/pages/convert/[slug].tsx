@@ -7,6 +7,7 @@ import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
 import relativeTime from 'dayjs/plugin/relativeTime'
 
+import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer';
 import TimezonePicker from 'react-bootstrap-timezone-picker';
@@ -34,7 +35,21 @@ const Convert: React.FC = () => {
         setUserTz(newValue);
     }
 
-    return <div>
+    return <>
+        <Head>
+            <title>When?</title>
+            <link rel="icon" href="/favicon.ico" />
+            <meta
+            name="Description"
+            content="When is that in my 
+            timezone"
+            /> 
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta property="og:title" content="when?" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="https://when.netlify.app/img/when.png" />
+            <meta property="og:description" content="When is that in my timezone?" />
+        </Head>
         <Header/>
         <h1 className={styles.label}>This event will occur at your local time ({displayTimezone}) </h1>
         <div className={styles.date}>{localDateFormatted}</div>
@@ -65,7 +80,7 @@ const Convert: React.FC = () => {
             Create your own When link here!
         </a>
         <Footer/>
-    </div>
+    </>
 }
 
 export default Convert;
