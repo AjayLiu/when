@@ -18,7 +18,8 @@
 .timezonePicker{
     text-align: center;
     background-color: white;
-    width: 40%;
+    width: 70%;
+    max-width: 350px;
 }
 
 .timeUntil{
@@ -28,7 +29,8 @@
 
 .customTimezone{
     border-top: 1px solid white;
-    width: 50%;
+    width: 90%;
+    max-width: 800px;
     margin: 100px auto;
 }
 
