@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 
 const TimeCreator: React.FC = () => {
     const [time, setTime] = useState(new Date());
-    const [outputLink, setOutputLink] = useState(`https://when.ajayliu.vercel.app/convert/${dayjs().unix()}`);
+    const [outputLink, setOutputLink] = useState(`https://when.netlify.app/convert/${dayjs().unix()}`);
     const outputLinkRef = useRef(null);
     const [isCopied, setIsCopied] = useState(false);
 
@@ -17,7 +17,7 @@ const TimeCreator: React.FC = () => {
             ms = null;
         }
         
-        setOutputLink(`https://when.ajayliu.vercel.app/convert/${ms||''}`)
+        setOutputLink(`https://when.ajayliu.netlify.app/convert/${ms||''}`)
     }
 
 
