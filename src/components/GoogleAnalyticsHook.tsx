@@ -4,7 +4,7 @@ import ReactGA from 'react-ga'
 const GoogleAnalyticsHook: React.FC = () => {
 
     useEffect(()=>{
-        ReactGA.initialize('UA-178410803-1')
+        ReactGA.initialize('UA-178410803-7')
         ReactGA.set({ page: window.location.pathname })
         ReactGA.pageview(window.location.pathname)
     }, [])
