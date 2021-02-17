@@ -29,10 +29,12 @@ const Convert: React.FC = () => {
 
     const currentLocalTime = dayjs().tz(userTz).format('hh:mm A');
 
-    const displayTimezone = userTz + " GMT" + dayjs().utcOffset()/60;
+    const [timezoneInfo, setTimezoneInfo] = useState(userTz + " GMT" + dayjs().tz(userTz).format("Z"));
 
     const onChangeTimeZone = (newValue) => {
         setUserTz(newValue);
+        const newGMT = dayjs().tz(newValue).format("Z")
+        setTimezoneInfo(newValue + " GMT" + newGMT);
     }
 
     return <>
@@ -51,7 +53,7 @@ const Convert: React.FC = () => {
             <meta property="og:description" content="When is that in my timezone?" />
         </Head>
         <Header/>
-        <h1 className={styles.label}>This event will occur at your local time ({displayTimezone}) </h1>
+        <h1 className={styles.label}>This event will occur at your local time ({timezoneInfo}) </h1>
         <div className={styles.date}>{localDateFormatted}</div>
         <div className={styles.time}>{localTimeFormatted}</div>
         <div className={styles.timeUntil}>
@@ -59,7 +61,7 @@ const Convert: React.FC = () => {
         </div>
         
         <div className={styles.customTimezone}>
-            <h2>Not the right timezone? ({displayTimezone})</h2>
+            <h2>Not the right timezone? ({timezoneInfo})</h2>
             <p>Pick the correct one below</p>
             <TimezonePicker className={styles.timezonePicker}
                 absolute      = {false}
