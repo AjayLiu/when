@@ -1,4 +1,11 @@
 .label{
+    width: 80%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+.label > div {
+    font-weight: lighter;
+    font-size: smaller;
 }
 
 .date, .time, .timeUntil, .localTime{
