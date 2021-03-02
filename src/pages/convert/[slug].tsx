@@ -53,7 +53,7 @@ const Convert: React.FC = () => {
             <meta property="og:description" content="When is that in my timezone?" />
         </Head>
         <Header/>
-        <h1 className={styles.label}>This event will occur at your local time ({timezoneInfo}) </h1>
+        <h1 className={styles.label}>This event will occur at your local time <div>({timezoneInfo})</div> </h1>
         <div className={styles.date}>{localDateFormatted}</div>
         <div className={styles.time}>{localTimeFormatted}</div>
         <div className={styles.timeUntil}>
