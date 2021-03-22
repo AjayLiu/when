@@ -46,6 +46,7 @@ const TimeCreator: React.FC = () => {
         <h3>Enter Date and Time to share:</h3>
         <DateTimePicker
           onChange={onChange}
+          initialValue={new Date()}
           value={time}
           disableClock
           locale={"en-US"}
