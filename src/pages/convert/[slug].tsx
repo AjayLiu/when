@@ -17,6 +17,7 @@ const Convert: React.FC = () => {
   const router = useRouter();
   const [num, setNum] = useState(0);
   useEffect(() => {
+    console.log(router.query.slug);
     setNum(parseInt(router.query.slug as string));
   }, [router.query]);
 
