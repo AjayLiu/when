@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 
 const TimeCreator: React.FC = () => {
   const [time, setTime] = useState(() => {
-    return dayjs().toDate();
+    return new Date();
   });
   const [outputLink, setOutputLink] = useState("");
   const outputLinkRef = useRef(null);
