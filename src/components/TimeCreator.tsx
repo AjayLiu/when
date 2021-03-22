@@ -5,7 +5,9 @@ import styles from "@styles/TimeCreator.module.css";
 import dayjs from "dayjs";
 
 const TimeCreator: React.FC = () => {
-  const [time, setTime] = useState(dayjs().toDate());
+  const [time, setTime] = useState(() => {
+    return dayjs().toDate();
+  });
   const [outputLink, setOutputLink] = useState("");
   const outputLinkRef = useRef(null);
   const [isCopied, setIsCopied] = useState(false);
@@ -16,6 +18,7 @@ const TimeCreator: React.FC = () => {
     if (value == null) {
       ms = null;
     }
+    console.log(value);
 
     setOutputLink(`https://when.netlify.app/convert/${ms || ""}`);
   };
