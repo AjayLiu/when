@@ -5,7 +5,7 @@ import styles from "@styles/TimeCreator.module.css";
 import dayjs from "dayjs";
 
 const TimeCreator: React.FC = () => {
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState(dayjs().toDate());
   const [outputLink, setOutputLink] = useState("");
   const outputLinkRef = useRef(null);
   const [isCopied, setIsCopied] = useState(false);
@@ -45,7 +45,6 @@ const TimeCreator: React.FC = () => {
         <h2>Generate a link</h2>
         <h3>Enter Date and Time to share:</h3>
         <DateTimePicker
-          // minDate={new Date()}
           onChange={onChange}
           value={time}
           disableClock
