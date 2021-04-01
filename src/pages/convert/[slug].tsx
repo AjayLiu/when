@@ -1,4 +1,4 @@
-import styles from "@styles/Convert.module.css";
+import styles from "./Convert.module.scss";
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -8,8 +8,8 @@ import timezone from "dayjs/plugin/timezone";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 import Head from "next/head";
-import Header from "@components/Header";
-import Footer from "@components/Footer";
+import Header from "@components/Header/Header";
+import Footer from "@components/Footer/Footer";
 import TimezonePicker from "react-bootstrap-timezone-picker";
 import "react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css";
 

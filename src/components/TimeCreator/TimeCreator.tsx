@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import DateTimePicker from "react-datetime-picker/dist/entry.nostyle";
-import styles from "@styles/TimeCreator.module.css";
+import styles from "./TimeCreator.module.scss";
 
 import dayjs from "dayjs";
 
