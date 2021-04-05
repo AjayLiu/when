@@ -54,8 +54,8 @@ const TimeCreator: React.FC = () => {
   return (
     <div>
       <div className={styles.picker}>
-        <h2>Generate a link</h2>
-        <h3>Enter Date and Time to share:</h3>
+        <h2>3 Easy Steps:</h2>
+        <h3>1. Enter Date and Time to share (in your local time):</h3>
         <DateTimePicker
           onChange={onChange}
           initialValue={new Date()}
@@ -63,7 +63,18 @@ const TimeCreator: React.FC = () => {
           disableClock
           locale={"en-US"}
         />
-        <h3>Share this link</h3>
+        <h3>2. Double Check</h3>
+        <div className={styles.timeUntil}>
+          {timeUntil ? (
+            <p>
+              The time entered above is{" "}
+              <div className={styles.emphasize}>{timeUntil}</div>, correct?
+            </p>
+          ) : (
+            <p>Looks like you haven't changed the time in Step 1 yet</p>
+          )}
+        </div>
+        <h3>3. Share this link</h3>
         <div className={styles.output}>
           <div className={styles.outputBar}>
             <textarea
@@ -83,15 +94,10 @@ const TimeCreator: React.FC = () => {
               </button>
             </div>
           </div>
-          {timeUntil && (
-            <div className={styles.timeUntil}>
-              <p>
-                DOUBLE CHECK: The time you inputted is{" "}
-                <strong>{timeUntil}</strong>
-              </p>
-              <p>Correct?</p>
-            </div>
-          )}
+        </div>
+        <div>
+          Your friends will be glad that you saved them a painful and confusing
+          time conversion! 😊
         </div>
       </div>
     </div>

@@ -46,11 +46,13 @@
         }
       }
     }
-    .timeUntil {
-      margin-top: 20px;
-      strong {
-        text-decoration: underline;
-      }
+  }
+  .timeUntil {
+    margin-top: 20px;
+    .emphasize {
+      display: inline;
+      font-size: larger;
+      text-decoration: underline;
     }
   }
 }
