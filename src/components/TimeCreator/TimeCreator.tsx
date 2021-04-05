@@ -3,6 +3,7 @@ import DateTimePicker from "react-datetime-picker/dist/entry.nostyle";
 import styles from "./TimeCreator.module.scss";
 
 import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 
 const TimeCreator: React.FC = () => {
   const [time, setTime] = useState(() => {
@@ -12,13 +13,14 @@ const TimeCreator: React.FC = () => {
   const outputLinkRef = useRef(null);
   const [isCopied, setIsCopied] = useState(false);
 
+  const [unix, setUnix] = useState(0);
   const onChange = (value) => {
     setTime(value);
     let ms = dayjs(value).unix();
     if (value == null) {
       ms = null;
     }
-    console.log(value);
+    setUnix(ms);
 
     setOutputLink(`https://when.netlify.app/convert/${ms || ""}`);
   };
@@ -42,6 +44,13 @@ const TimeCreator: React.FC = () => {
     e.target.focus();
     setIsCopied(true);
   };
+
+  dayjs.extend(relativeTime);
+  const timeUntil =
+    Math.abs(unix - dayjs(new Date()).unix()) > 100
+      ? dayjs.unix(unix).fromNow()
+      : null;
+
   return (
     <div>
       <div className={styles.picker}>
@@ -74,6 +83,15 @@ const TimeCreator: React.FC = () => {
               </button>
             </div>
           </div>
+          {timeUntil && (
+            <div className={styles.timeUntil}>
+              <p>
+                DOUBLE CHECK: The time you inputted is{" "}
+                <strong>{timeUntil}</strong>
+              </p>
+              <p>Correct?</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
