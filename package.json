@@ -18,6 +18,7 @@
     "react-datetime-picker": "^3.2.0",
     "react-dom": "17.0.1",
     "react-ga": "^3.3.0",
+    "react-rainbow-components": "^1.25.0",
     "react-router-dom": "^5.2.0",
     "sass": "^1.32.8"
   },

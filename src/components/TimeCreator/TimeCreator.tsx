@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import DateTimePicker from "react-datetime-picker/dist/entry.nostyle";
 import styles from "./TimeCreator.module.scss";
+import { DateTimePicker } from "react-rainbow-components";
 
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -22,7 +22,7 @@ const TimeCreator: React.FC = () => {
     }
     setUnix(ms);
 
-    setOutputLink(`https://when.netlify.app/convert/${ms || ""}`);
+    setOutputLink(`${window.location.href}convert/${ms || ""}`);
   };
 
   useEffect(() => {
@@ -57,11 +57,13 @@ const TimeCreator: React.FC = () => {
         <h2>3 Easy Steps:</h2>
         <h3>1. Enter Date and Time to share (in your local time):</h3>
         <DateTimePicker
-          onChange={onChange}
-          initialValue={new Date()}
+          style={{ width: "80%", margin: "auto" }}
           value={time}
-          disableClock
+          onChange={onChange}
+          label="Pick a time"
+          formatStyle="large"
           locale={"en-US"}
+          minDate={dayjs().toDate()}
         />
         <h3>2. Double Check</h3>
         <div className={styles.timeUntil}>
