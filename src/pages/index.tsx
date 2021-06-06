@@ -1,14 +1,12 @@
 import Head from "next/head";
 import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
-import GoogleAnalyticsHook from "@components/GoogleAnalyticsHook";
 import Intro from "@components/Intro/Intro";
 import TimeCreator from "@components/TimeCreator/TimeCreator";
 
 const Home: React.FC = () => {
   return (
     <>
-      <GoogleAnalyticsHook />
       <div className="container">
         <Head>
           <title>when?</title>

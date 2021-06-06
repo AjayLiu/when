@@ -1,4 +1,5 @@
 import styles from "./Convert.module.scss";
+import Link from "next/link";
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -94,7 +95,9 @@ const Convert: React.FC = () => {
       </div>
 
       <div className={styles.createLink}>
-        <a href="/">Create your own When link here!</a>
+        <Link href="/">
+          <a>Create your own When link here!</a>{" "}
+        </Link>
       </div>
       <Footer />
     </>

@@ -1,13 +1,13 @@
-import GoogleAnalyticsHook from '@components/GoogleAnalyticsHook'
+import Link from "next/link";
 
 const FourOhFour: React.FC = () => {
-  return <>
-    <GoogleAnalyticsHook />
-
-    <h1>404 - Page Not Found :(</h1>
-    <a href="../">
-      Click me to go to home page
-    </a>
-  </>
-}
+  return (
+    <>
+      <h1>404 - Page Not Found :(</h1>
+      <Link href="../">
+        <a>Click me to go to home page</a>
+      </Link>
+    </>
+  );
+};
 export default FourOhFour;
