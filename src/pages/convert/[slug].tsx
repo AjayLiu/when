@@ -96,7 +96,7 @@ const Convert: React.FC = () => {
 
       <div className={styles.createLink}>
         <Link href="/">
-          <a>Create your own When link here!</a>{" "}
+          <a>Create your own When link here!</a>
         </Link>
       </div>
       <Footer />
