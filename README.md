@@ -10,9 +10,10 @@
   <p align="center">      
     Tired of having to convert to everyone's timezone in a group chat?
     <br />
-    With <em>When?</em>, you can send a single link and when your friends open it up, it will be in     their local time!
+    With <em>When?</em>, you can send a single link and when your friends open it up, it will be in their local time!
     <br />
     <a href="https://when.ajayliu.com"><strong>Website »</strong></a>
+  </p>
 </p>
 
 
@@ -32,6 +33,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#publishing">Publishing</a></li>
       </ul>
     </li>
     <li><a href="#license">License</a></li>
@@ -76,7 +78,6 @@ Here is a guide if you want to clone my website and modify it for yourself, all 
    ```sh
    yarn
    ```
-4. Publish the site on Netlify using continuous git integration. :tada:
 
 ### Development
 
@@ -85,6 +86,9 @@ To run the development server
    yarn dev
    ```
 Then head over to localhost:3000
+
+### Publishing
+1. Publish the site on Netlify using continuous git integration. :tada:
 
 <!-- LICENSE -->
 ## License
@@ -105,4 +109,6 @@ Project Link: [https://github.com/AjayLiu/when](https://github.com/AjayLiu/when)
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Day.js](https://day.js.org/)
+* [react-rainbow-components](https://react-rainbow.io/)
+* [react-bootstrap-timezone-picker](https://www.npmjs.com/package/react-bootstrap-timezone-picker)
 * [Netlify](https://www.netlify.com/)
