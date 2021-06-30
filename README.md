@@ -16,8 +16,6 @@
   </p>
 </p>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
@@ -43,31 +41,31 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 <img src="preview.png"></img>
 
-This site uses links which contain a UNIX timestamp (ex: 1624515180), or how many seconds have passed since January 1, 1970. This information is then converted using Day.js when the user opens up the link, to their respective local times. 
+This site uses links which contain a UNIX timestamp (ex: 1624515180), or how many seconds have passed since January 1, 1970. This information is then converted using Day.js when the user opens up the link, to their respective local times.
 
 ### Built With
-* [Next.js](https://nextjs.org/)
-* [React](https://reactjs.org/)
-* [SCSS](https://sass-lang.com/)
-* [Netlify](https://www.netlify.com/)
 
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [SCSS](https://sass-lang.com/)
+- [Netlify](https://www.netlify.com/)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 Here is a guide if you want to clone my website and modify it for yourself, all the way to deployment.
 
 ### Prerequisites
 
-* [yarn](https://yarnpkg.com/)
-* [git](https://git-scm.com/)
+- [yarn](https://yarnpkg.com/)
+- [git](https://git-scm.com/)
 
 ### Installation
 
@@ -83,33 +81,36 @@ Here is a guide if you want to clone my website and modify it for yourself, all 
 ### Development
 
 To run the development server
-   ```sh
-   yarn dev
-   ```
+
+```sh
+yarn dev
+```
+
 Then head over to localhost:3000
 
 ### Deployment
+
 1. Publish the site on Netlify using continuous git integration. :tada:
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Ajay Liu - contact@ajayliu.com
 
 Project Link: [https://github.com/AjayLiu/when](https://github.com/AjayLiu/when)
 
-
-
 <!-- ACKNOWLEDGEMENTS -->
+
 ## Acknowledgements
-* [Day.js](https://day.js.org/)
-* [react-rainbow-components](https://react-rainbow.io/)
-* [react-bootstrap-timezone-picker](https://www.npmjs.com/package/react-bootstrap-timezone-picker)
-* [Netlify](https://www.netlify.com/)
+
+- [Day.js](https://day.js.org/)
+- [react-rainbow-components](https://react-rainbow.io/)
+- [react-timezone-select](https://ndom91.github.io/react-timezone-select/)
+- [Netlify](https://www.netlify.com/)
