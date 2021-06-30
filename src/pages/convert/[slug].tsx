@@ -11,8 +11,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import Head from "next/head";
 import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
-import TimezonePicker from "react-bootstrap-timezone-picker";
-import "react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min.css";
+import TimezoneSelect from "react-timezone-select";
 
 const Convert: React.FC = () => {
   const router = useRouter();
@@ -39,7 +38,7 @@ const Convert: React.FC = () => {
     userTz + " GMT" + dayjs().tz(userTz).format("Z")
   );
 
-  const onChangeTimeZone = (newValue) => {
+  const onChangeTimeZone = (newValue: string) => {
     setUserTz(newValue);
     const newGMT = dayjs().tz(newValue).format("Z");
     setTimezoneInfo(newValue + " GMT" + newGMT);
@@ -80,14 +79,12 @@ const Convert: React.FC = () => {
       <div className={styles.customTimezone}>
         <h2>Not the right timezone? ({timezoneInfo})</h2>
         <p>Pick the correct one below</p>
-        <TimezonePicker
-          className={styles.timezonePicker}
-          absolute={false}
-          defaultValue={guessedZone}
-          placeholder="Select timezone..."
-          onChange={(newValue) => onChangeTimeZone(newValue)}
-          value={userTz}
-        />
+        <div className={styles.timezonePicker}>
+          <TimezoneSelect
+            value={userTz}
+            onChange={(timezone) => onChangeTimeZone(timezone.value)}
+          />
+        </div>
         <div className={styles.localTimeBox}>
           Just checking... your local time should be:
           <div className={styles.localTime}>{currentLocalTime}</div>

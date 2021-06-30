@@ -9,17 +9,16 @@
     "export": "yarn build && next export"
   },
   "dependencies": {
-    "axios": "^0.21.1",
     "dayjs": "^1.10.4",
     "next": "^10.2.3",
+    "next-transpile-modules": "^8.0.0",
     "react": "17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-bootstrap-timezone-picker": "^2.0.1",
-    "react-datetime-picker": "^3.2.0",
     "react-dom": "17.0.1",
     "react-ga": "^3.3.0",
     "react-rainbow-components": "^1.25.0",
-    "react-router-dom": "^5.2.0",
+    "react-timezone-select": "^1.0.4",
     "sass": "^1.32.8"
   },
   "devDependencies": {
